@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>sdemesandwich</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <!--Google Map-->
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+
+        function initialize() {
+            var map_canvas = document.getElementById('map_canvas');
+            var map_options = {
+                center: new google.maps.LatLng(22.616800, 120.311517),  //頁面的中心點    //經緯度
+                zoom: 16, //鏡頭遠近，1最遠，20最近
+                mapTypeId: google.maps.MapTypeId.ROADMAP  //正常2D道路模式
+            }
+            //將上面參數加入MAP中，此為顯示GOOGLE map的重點
+            var map = new google.maps.Map(map_canvas, map_options)
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+
+<body>
+
+    <head>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark bd-navbar">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/svg/sdeme_logo.svg" width="30" height="30" class="d-inline-block align-top" alt="Logo"
+                    loading="lazy">
+                Sdeme Sandwich
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">首頁 </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="visit.html">門市查詢<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">商品介紹</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="about.html">關於我們</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="contact.html">連絡我們</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/sdemesandwich/">
+                            <span class="fa fa-instagram" style="font-size:36px; color:white"></span>
+                        </a>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/sdemesandwich">
+                            <span class="fa fa-facebook-square" style="font-size:36px ;color:white"></span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </head>
+    <div class="container-fluid ">
+        <div class="container foot-wrap">
+            <div class=" row">
+            <div class=" row-content col-md-6 text-black">
+                <p class="h1 font-weight-bold">Store </p>
+                <p class="h4 uppercase mb32">門市查詢 </p>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="row-content col-md-4 col-sm-4 ">
+
+            <p class="h2 font-weight-bold text-primary">高雄三多門市</p>
+            <ul class="list-unstyled">
+                <li>電話 07-3349543</li>
+                <li>時間 週一至週日 07:30~20:00</li>
+                <li>地址 高雄市苓雅區三多三路96號</li>
+            </ul>
+        </div>
+        <div class="row-content col-md-4 col-sm-4">
+
+            <div id="map_canvas">
+
+
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+
+    </div>
+
+    <!--採用container-fluid,使得整個頁尾的寬度為100%,並設定它的背景色-->
+    <footer class="container-fluid   foot-wrap bg-dark">
+        <!--採用container,使得頁尾內容居中 -->
+        <div class="container-sm text-white">
+
+            <div class="row justify-content-center  ">
+                <div class="row-content col-md-3 col-sm-6 ">
+                    <img src="assets/svg/sdeme_logo.svg" class="rounded-circle" width="100" height="100"
+                        class="d-inline-block " alt="Logo" loading="lazy ">
+                </div>
+                <div class="row-content col-md-3 col-sm-6">
+                    <p class="h5">Sdeme Sandwich</p>
+                    <ul class="list-unstyled">
+                        <li>電話 07-3349543</li>
+                        <li>時間 週一至週日 07:30~20:00</li>
+                        <li>地址 高雄市苓雅區三多三路96號</li>
+                    </ul>
+                </div>
+                <div class="row-content col-md-3 col-sm-6">
+
+                    <!-- 社交圖示列表,其中圖示採用的是Font Awesome圖示字型庫-->
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.facebook.com/sdemesandwich" title="Facebook Page">
+                                <span class="fa fa-facebook-square" style="font-size:50px ;color:white"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/sdemesandwich/" title="Instagram">
+                                <span class="fa fa-instagram" style="font-size:50px; color:white"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row-content col-md-3 col-sm-6">
+                </div>
+
+            </div>
+            <!--/.row -->
+        </div>
+        <!--/.container-->
+        <div class="row justify-content-center footer-bottom  ">
+            <p class="copyright text-white-50 text-muted ">&copy;Copyright 2020 - Sdeme Sandwich</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
